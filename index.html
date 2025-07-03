@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        body::before {
+            display: block;
+            content: '';
+            height: 60px;
+        }
+
+        @media(min-width: 768px) {
+            .join-input {
+                width: 50%;
+            }
+        }
+
+        .logo {
+            max-width: 50px;
+            height: auto;
+        }
+
+        .arduino-logo {
+            margin-left: 50px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="img/logo.png" alt="" class="logo">
+                <h2 style="color: #eaf4f7;">MICON</h3>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navigation-menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#learn" class="nav-link">Start Learning</a></li>
+                    <li class="nav-item"><a href="#questions" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#instructor" class="nav-link">Our Instructor</a></li>
+                    <li class="nav-item"><a href="#product" class="nav-link">Buy to learn</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="keranjang"
+        class="position-fixed top-10 end-0 bg-primary text-white px-3 py-2 rounded-start d-flex align-items-center gap-2 shadow"
+        style="z-index: 2050; max-width: 300px;">
+        <img src="img/keranjang.webp" alt="Cart" style="width: 20px;">
+        <span><span id="item">0</span> ITEM</span>
+        <span>Rp. <span id="harga">0</span></span>
+    </section>
+
+    <!-- Banner-->
+    <section class="bg-dark text-light p-4 text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h1>Become an <span class="text-warning">Embedded Engineer</span></h1>
+                    <p class="lead my-4">We can help you learn how to design and program specialized computing devices
+                        that power everything from smartphones to smart appliances.</p>
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">Start The
+                        Course</button>
+                </div>
+                <img src="img/banner.jpg" alt="" class="img-fluid mt-4 w-50 d-none d-sm-block">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign Up -->
+    <section class="bg-primary text-light p-5">
+        <div class="container">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <h3 class="mb-3 mb-md-0">Sign Up For Our Program</h3>
+                <div class="input-group join-input">
+                    <input type="text" class="form-control" placeholder="Enter Your Email...">
+                    <button class="btn btn-dark btn-lg" type="button">Enroll</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contract -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center g-3">
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Virtual</h3>
+                            <p class="card-text mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                                itaque impedit blanditiis aliquam magnam dolore pariatur facere unde corrupti sed.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-person-square"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Hybrid</h3>
+                            <p class="card-text mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                                itaque impedit blanditiis aliquam magnam dolore pariatur facere unde corrupti sed.</p>
+                            <a href="#" class="btn btn-dark">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h3 class="card-title mb-3">In Person</h3>
+                            <p class="card-text mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                                itaque impedit blanditiis aliquam magnam dolore pariatur facere unde corrupti sed.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Learn -->
+    <section id="learn" class="p-5">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md">
+                    <img src="img/C-C++.webp" alt="" class="img-fluid">
+                </div>
+                <div class="col-md p-5">
+                    <h2>Learn The Basics</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse expedita neque
+                        praesentium repellendus rerum numquam!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum illo at esse odit accusantium.
+                        Ipsum est ex cum, culpa labore neque natus optio eveniet fugiat assumenda, velit quia libero
+                        cupiditate sapiente corrupti tempora placeat unde.</p>
+                    <a href="#" class="btn btn-light mt-3"><i class="bi bi-chevron-right"></i>Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark text-light p-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-5">
+                    <h2>Learn Microcontroller</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse expedita neque
+                        praesentium repellendus rerum numquam!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum illo at esse odit accusantium.
+                        Ipsum est ex cum, culpa labore neque natus optio eveniet fugiat assumenda, velit quia libero
+                        cupiditate sapiente corrupti tempora placeat unde.</p>
+                    <a href="#" class="btn btn-dark mt-3"><i class="bi bi-chevron-right"></i>Read More</a>
+                </div>
+                <div class="col-md">
+                    <img src="img/arduino.png" alt="" class="img-fluid arduino-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Question Accordion -->
+    <section id="questions" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            How Much does it cost ?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">It range from 300k - 500k IDR depends on the meeting program you choose.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            How long the program will take ?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">The program will take around 3 - 5 months, you can leave whenever you want.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            What skill will I learn by joining the program ?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">You will have clear understanding how computer works in general. 
+                            You will have slight understanding about how electrical circuitry works, and how to control them with code from computer.
+                        <br><strong>And you will definitely be able to build your own future Embedded project.</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Instructor-->
+    <section id="instructor" class="p-5 bg-primary">
+        <div class="container">
+            <h2 class="text-center text-white">Our instructor</h2>
+            <p class="lead text-center text-white mb-5">Our Instructor have wide experience in the field for atleast 5 years or more.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="" class="rounded-circle mb3">
+                        <h3 class="card-title my-3">Sheriff Woody</h3>
+                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, assumenda
+                            ex explicabo repudiandae corrupti numquam.</p>
+                        <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="" class="rounded-circle mb3">
+                        <h3 class="card-title my-3">Buzz Lightyear</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim totam
+                            temporibus architecto rerum saepe debitis?</p>
+                        <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="" class="rounded-circle mb3">
+                        <h3 class="card-title my-3">Bo Peep</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis rerum
+                            aliquid corrupti in ut consectetur.</p>
+                        <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="" class="rounded-circle mb3">
+                        <h3 class="card-title my-3">Lot's O' Huggin'</h3>
+                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, expedita et.
+                            Doloremque quaerat facere quidem.</p>
+                        <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Products-->
+    <section class="container my-3" id="product">
+        <h1 class="text-center mb-4">Equipment that might helps you</h1>
+        <p class="lead mb-3 text-center text-dark p-3">You cannot learn much, without having the tools in your hand. Take a look!</p>
+        <div class="row g-4 justify-content-center">
+            <!-- Product 1 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="img/raspery_pi.jpg" class="card-img-top" alt="Raspberry Pi">
+                    <div class="card-body">
+                        <h5 class="card-title">Raspberry Pi</h5>
+                        <p class="card-text">Rp. 2.300.000</p>
+                        <form action="#" method="post">
+                            <input type="hidden" class="harga" value="2300000">
+                            <input type="number" class="form-control mb-2 quantity-input" name="quantity" value="1"
+                                min="1">
+                            <button type="submit" class="btn btn-dark w-100 buy-btn">Buy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="img/STM32F103C8T6.jpeg" class="card-img-top" alt="STM32F103C8T6">
+                    <div class="card-body">
+                        <h5 class="card-title">STM32F103C</h5>
+                        <p class="card-text">Rp. 49.900</p>
+                        <form action="#" method="post">
+                            <input type="hidden" class="harga" value="49900">
+                            <input type="number" class="form-control mb-2 quantity-input" name="quantity" value="1"
+                                min="1">
+                            <button type="submit" class="btn btn-dark w-100 buy-btn">Buy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="img/stmnucleo.jpg" class="card-img-top" alt="STM 32 NUcleo">
+                    <div class="card-body">
+                        <h5 class="card-title">STM 32 Nucleo</h5>
+                        <p class="card-text">Rp. 499.900</p>
+                        <form action="#" method="post">
+                            <input type="hidden" class="harga" value="499900">
+                            <input type="number" class="form-control mb-2 quantity-input" name="quantity" value="1"
+                                min="1">
+                            <button type="submit" class="btn btn-dark w-100 buy-btn">Buy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="img/ch340.webp" class="card-img-top" alt="ch340">
+                    <div class="card-body">
+                        <h5 class="card-title">CH 340 IC</h5>
+                        <p class="card-text">Rp. 100.000</p>
+                        <form action="#" method="post">
+                            <input type="hidden" class="harga" value="100000">
+                            <input type="number" class="form-control mb-2 quantity-input" name="quantity" value="1"
+                                min="1">
+                            <button type="submit" class="btn btn-dark w-100 buy-btn">Buy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="img/74CH595.webp" class="card-img-top" alt="74CH595 IC">
+                    <div class="card-body">
+                        <h5 class="card-title">74CH595</h5>
+                        <p class="card-text">Rp. 20.000</p>
+                        <form action="#" method="post">
+                            <input type="hidden" class="harga" value="20000">
+                            <input type="number" class="form-control mb-2 quantity-input" name="quantity" value="1"
+                                min="1">
+                            <button type="submit" class="btn btn-dark w-100 buy-btn">Buy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="img/stLinkv2.webp" class="card-img-top" alt="stLinkv2">
+                    <div class="card-body">
+                        <h5 class="card-title">ST LINK V2</h5>
+                        <p class="card-text">Rp. 85.000</p>
+                        <form action="#" method="post">
+                            <input type="hidden" class="harga" value="85000">
+                            <input type="number" class="form-control mb-2 quantity-input" name="quantity" value="1"
+                                min="1">
+                            <button type="submit" class="btn btn-dark w-100 buy-btn">Buy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="img/breadboard.webp" class="card-img-top" alt="Bread Board">
+                    <div class="card-body">
+                        <h5 class="card-title">Bread Board</h5>
+                        <p class="card-text">Rp. 27.000</p>
+                        <form action="#" method="post">
+                            <input type="hidden" class="harga" value="27000">
+                            <input type="number" class="form-control mb-2 quantity-input" name="quantity" value="1"
+                                min="1">
+                            <button type="submit" class="btn btn-dark w-100 buy-btn">Buy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact & Map-->
+    <section class="p-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-7">
+                    <h2 class="text-center mb-4">Contact Info</h2>
+                    <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Main Location :</span> Jl. Sunggal Gg. Bakul, Kota Medan
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Phone :</span> +62618457703
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Enrollment Phone :</span> +6281234567890
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Email :</span> student@gmail.com
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.060068889906!2d98.60996607349009!3d3.573661350399551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312fc7e012030d%3A0x376fa497cff6be89!2sUniversitas%20Satya%20Terra%20Bhinneka!5e0!3m2!1sid!2sid!4v1751453005479!5m2!1sid!2sid"
+                        width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <p class="lead">Copyright &copy; 2025 MICRON</p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="enroll" tabindex="-1" role="dialog" aria-labelledby="enrollLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="enrollLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">Fill the forum to register, and we will get back to you</p>
+                    <div class="mb-3">
+                        <form>
+                            <label for="name" class="col-form-label">Name : </label>
+                            <input type="text" class="form-control" id="first-name">
+                        </form>
+                    </div>
+
+                    <div class="mb-3">
+                        <form>
+                            <label for="Password" class="col-form-label">Password : </label>
+                            <input type="password" class="form-control" id="Password">
+                        </form>
+                    </div>
+
+                    <div class="mb-3">
+                        <form>
+                            <label for="Email" class="col-form-label">Email : </label>
+                            <input type="text" class="form-control" id="Email">
+                        </form>
+                    </div>
+
+                    <div class="mb-3">
+                        <form>
+                            <label for="Phone" class="col-form-label">Phone : </label>
+                            <input type="text" class="form-control" id="Phone">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
